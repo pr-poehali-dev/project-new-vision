@@ -4,7 +4,6 @@ import { GlowingTiltCard } from "@/components/ui/glowing-tilt-card"
 import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedBackground } from "@/components/ui/animated-background"
-import { ProgressCard } from "@/components/ui-library/cards/progress-card"
 import Icon from "@/components/ui/icon"
 
 export function FeaturesSection() {
@@ -13,42 +12,36 @@ export function FeaturesSection() {
       icon: <Icon name="MapPin" className="h-10 w-10 text-red-500" />,
       title: "Интерактивная карта",
       description: "Фильтры по типу спорта, рейтинги и отзывы, фото и панорамы площадок.",
-      progress: 100,
       borderClass: "border-glow-red",
     },
     {
       icon: <Icon name="Users" className="h-10 w-10 text-blue-500" />,
       title: "Социальные функции",
       description: "Поиск партнёров для тренировок, создание клубов и групп по интересам.",
-      progress: 90,
       borderClass: "border-glow-blue",
     },
     {
       icon: <Icon name="Calendar" className="h-10 w-10 text-yellow-500" />,
       title: "Календарь событий",
       description: "Турниры, мастер-классы и открытые тренировки. Регистрация прямо на сайте.",
-      progress: 95,
       borderClass: "border-glow-yellow",
     },
     {
       icon: <Icon name="Trophy" className="h-10 w-10 text-green-500" />,
       title: "Геймификация",
       description: "Бейджи, рейтинги и еженедельные челленджи с призами от партнёров.",
-      progress: 100,
       borderClass: "border-glow-green",
     },
     {
       icon: <Icon name="Bot" className="h-10 w-10 text-purple-500" />,
       title: "AI-тренер",
       description: "Персональный план тренировок, советы по питанию и адаптация под погоду.",
-      progress: 85,
       borderClass: "border-glow-purple",
     },
     {
       icon: <Icon name="Accessibility" className="h-10 w-10 text-orange-500" />,
       title: "Доступность и инклюзивность",
       description: "Фильтры для людей с ограниченными возможностями, мультиязычный интерфейс.",
-      progress: 92,
       borderClass: "border-glow-orange",
     },
   ]
@@ -95,20 +88,10 @@ export function FeaturesSection() {
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent>
                       <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
                         {feature.description}
                       </CardDescription>
-
-                      <ProgressCard
-                        title=""
-                        progress={feature.progress}
-                        total={100}
-                        status={feature.progress === 100 ? "success" : "default"}
-                        showPercentage
-                        variant="minimal"
-                        progressColor={feature.progress === 100 ? "bg-green-500" : "bg-red-500"}
-                      />
                     </CardContent>
                   </Card>
                 </GlowingTiltCard>

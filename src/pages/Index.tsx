@@ -5,8 +5,7 @@ import { PageTransition } from "@/components/page-transition"
 import { HeroSection } from "@/components/sections/hero-section"
 import { FeaturesSection } from "@/components/sections/features-section"
 import { ComponentLibraryShowcase } from "@/components/sections/component-library-showcase"
-import { TestimonialsSection } from "@/components/sections/testimonials-section"
-import { PricingSection } from "@/components/sections/pricing-section"
+
 import { BlogSection } from "@/components/sections/blog-section"
 import { FaqSection } from "@/components/sections/faq-section"
 import { CtaSection } from "@/components/sections/cta-section"
@@ -34,8 +33,6 @@ const Index = () => {
             <HeroSection />
             <FeaturesSection />
             <ComponentLibraryShowcase />
-            <TestimonialsSection />
-            <PricingSection />
             <BlogSection />
             <FaqSection />
             <CtaSection />
