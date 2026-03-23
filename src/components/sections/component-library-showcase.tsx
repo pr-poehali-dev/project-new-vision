@@ -10,7 +10,9 @@ import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
 import { PrimaryButton, SecondaryButton, OutlineButton } from "@/components/ui-library/buttons/button-variants"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { ScrollAnimation, StaggerContainer, StaggerItem } from "@/components/ui-library/animations/scroll-animations"
-import { Sparkles, Zap, Layers, Palette, ArrowRight, CheckCircle, BookOpen, Lightbulb, Rocket } from "lucide-react"
+import { ArrowRight, CheckCircle, Rocket, Sparkles, Lightbulb } from "lucide-react"
+
+import Icon from "@/components/ui/icon"
 
 export function ComponentLibraryShowcase() {
   const [activeTab, setActiveTab] = useState("cards")
@@ -22,13 +24,13 @@ export function ComponentLibraryShowcase() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Библиотека компонентов"
+                text="Популярные площадки"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Исследуйте нашу коллекцию красиво оформленных UI-компонентов"
+                text="Исследуйте лучшие спортивные объекты города — от футбольных полей до скалодромов"
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -49,29 +51,29 @@ export function ComponentLibraryShowcase() {
                   containerClassName="rounded-full"
                 >
                   <TabsList className="glassmorphic-tabs border-0">
-                    <TabsTrigger value="cards">Карточки</TabsTrigger>
-                    <TabsTrigger value="buttons">Кнопки</TabsTrigger>
-                    <TabsTrigger value="progress">Прогресс</TabsTrigger>
+                    <TabsTrigger value="cards">Площадки</TabsTrigger>
+                    <TabsTrigger value="buttons">Присоединиться</TabsTrigger>
+                    <TabsTrigger value="progress">Мои достижения</TabsTrigger>
                   </TabsList>
                 </AnimatedGradientBorder>
               </div>
 
-              {/* Cards Tab */}
+              {/* Площадки Tab */}
               <TabsContent value="cards" className="space-y-12">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Карточки с изображениями</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Спортивные площадки рядом с вами</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Универсальные карточки с изображениями и текстом для демонстрации контента, продуктов или функций
+                    Реальные объекты с фото, рейтингами и отзывами пользователей
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <ScrollAnimation type="slide" direction="up" delay={0.1}>
                       <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Design"
-                        imageAlt="Design System"
-                        title="Дизайн-система"
-                        description="Комплексная дизайн-система с единообразными компонентами и стилями для веб-приложений."
-                        tags={["Дизайн", "UI/UX"]}
+                        imageSrc="/placeholder.svg?height=300&width=500&text=Football"
+                        imageAlt="Футбольное поле"
+                        title="Стадион «Динамо»"
+                        description="Профессиональное футбольное поле с искусственным покрытием. Освещение, раздевалки, трибуны."
+                        tags={["Футбол", "★ 4.8"]}
                         variant="default"
                         className="border-glow-red"
                       />
@@ -79,11 +81,11 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.2}>
                       <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Components"
-                        imageAlt="Component Library"
-                        title="Переиспользуемые компоненты"
-                        description="Разрабатывайте быстрее с нашей библиотекой готовых настраиваемых UI-компонентов."
-                        tags={["React", "TypeScript"]}
+                        imageSrc="/placeholder.svg?height=300&width=500&text=Basketball"
+                        imageAlt="Баскетбольная площадка"
+                        title="Баскетбольный корт"
+                        description="Уличная баскетбольная площадка в парке. Новые кольца, асфальтовое покрытие, доступно 24/7."
+                        tags={["Баскетбол", "★ 4.5"]}
                         variant="hover-zoom"
                         className="border-glow-blue"
                       />
@@ -91,11 +93,11 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
                       <ImageCard
-                        imageSrc="/placeholder.svg?height=300&width=500&text=Animation"
-                        imageAlt="Animation Library"
-                        title="Плавные анимации"
-                        description="Оживите интерфейсы коллекцией производительных и доступных анимаций."
-                        tags={["Motion", "Интерактив"]}
+                        imageSrc="/placeholder.svg?height=300&width=500&text=Climbing"
+                        imageAlt="Скалодром"
+                        title="Скалодром «Вершина»"
+                        description="Крытый скалодром с трассами для новичков и профи. Прокат снаряжения, инструкторы, кафе."
+                        tags={["Скалолазание", "★ 4.9"]}
                         variant="hover-reveal"
                         className="border-glow-purple"
                       />
@@ -104,18 +106,18 @@ export function ComponentLibraryShowcase() {
                 </div>
 
                 <div className="space-y-4 pt-8">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">CTA-карточки</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Действия с площадками</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Привлекающие внимание карточки для конверсии посетителей в клиентов
+                    Бронируйте время, оставляйте отзывы и приглашайте друзей
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <ScrollAnimation type="slide" direction="up" delay={0.1}>
                       <CtaCard
-                        title="Начните сегодня"
-                        description="Присоединяйтесь к тысячам разработчиков, создающих крутые интерфейсы."
-                        primaryAction={{ text: "Регистрация" }}
-                        secondaryAction={{ text: "Подробнее" }}
+                        title="Забронировать время"
+                        description="Выберите удобный слот и зарезервируйте площадку для своей команды."
+                        primaryAction={{ text: "Забронировать" }}
+                        secondaryAction={{ text: "Расписание" }}
                         variant="default"
                         icon={<Rocket className="h-6 w-6" />}
                         className="border-glow-green"
@@ -124,9 +126,9 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.2}>
                       <CtaCard
-                        title="Премиум-функции"
-                        description="Разблокируйте продвинутые компоненты с премиум-тарифом."
-                        primaryAction={{ text: "Улучшить" }}
+                        title="Найти соперника"
+                        description="Создайте запрос и найдите партнёров для игры уже сегодня."
+                        primaryAction={{ text: "Найти команду" }}
                         variant="gradient"
                         alignment="center"
                         buttonVariant="gradient"
@@ -137,9 +139,9 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
                       <CtaCard
-                        title="Нужна помощь?"
-                        description="Наша команда поддержки готова ответить на любые вопросы."
-                        primaryAction={{ text: "Поддержка" }}
+                        title="Оставить отзыв"
+                        description="Помогите другим спортсменам сделать правильный выбор."
+                        primaryAction={{ text: "Написать отзыв" }}
                         variant="glass"
                         alignment="right"
                         buttonVariant="magnetic"
@@ -151,32 +153,32 @@ export function ComponentLibraryShowcase() {
                 </div>
               </TabsContent>
 
-              {/* Buttons Tab */}
+              {/* Присоединиться Tab */}
               <TabsContent value="buttons" className="space-y-12">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Стили кнопок</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Найди команду и партнёров</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Полная коллекция стилей кнопок для любых задач
+                    Создавайте запросы и вступайте в спортивные клубы по своим интересам
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <ScrollAnimation type="slide" direction="left" delay={0.1}>
                       <div className="p-6 rounded-xl border glassmorphic-card border-glow-red">
-                        <h4 className="text-lg font-medium mb-6">Основные и вторичные</h4>
+                        <h4 className="text-lg font-medium mb-6">Поиск партнёра</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>
                             <StaggerItem>
-                              <PrimaryButton>Основная</PrimaryButton>
+                              <PrimaryButton>Найти партнёра</PrimaryButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <PrimaryButton leftIcon={<Zap className="h-4 w-4" />}>С иконкой</PrimaryButton>
+                              <PrimaryButton leftIcon={<Icon name="Dumbbell" className="h-4 w-4" />}>Тренировка</PrimaryButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <SecondaryButton>Вторичная</SecondaryButton>
+                              <SecondaryButton>Мои запросы</SecondaryButton>
                             </StaggerItem>
                             <StaggerItem>
                               <SecondaryButton rightIcon={<ArrowRight className="h-4 w-4" />}>
-                                Подробнее
+                                Все объявления
                               </SecondaryButton>
                             </StaggerItem>
                           </StaggerContainer>
@@ -186,21 +188,21 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="right" delay={0.1}>
                       <div className="p-6 rounded-xl border glassmorphic-card border-glow-blue">
-                        <h4 className="text-lg font-medium mb-6">Контурные и градиентные</h4>
+                        <h4 className="text-lg font-medium mb-6">Клубы и группы</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>
                             <StaggerItem>
-                              <OutlineButton>Контурная</OutlineButton>
+                              <OutlineButton>Все клубы</OutlineButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <OutlineButton leftIcon={<BookOpen className="h-4 w-4" />}>Документация</OutlineButton>
+                              <OutlineButton leftIcon={<Icon name="Users" className="h-4 w-4" />}>Создать клуб</OutlineButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <GradientButton>Градиент</GradientButton>
+                              <GradientButton>Вступить</GradientButton>
                             </StaggerItem>
                             <StaggerItem>
                               <GradientButton gradientFrom="from-blue-500" gradientTo="to-purple-600" glowAmount={4}>
-                                Со свечением
+                                Пригласить
                               </GradientButton>
                             </StaggerItem>
                           </StaggerContainer>
@@ -210,16 +212,16 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
                       <div className="p-6 rounded-xl border glassmorphic-card border-glow-purple">
-                        <h4 className="text-lg font-medium mb-6">Интерактивные кнопки</h4>
+                        <h4 className="text-lg font-medium mb-6">Быстрые действия</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>
                             <StaggerItem>
                               <MagneticButton className="neumorphic-button-primary">
-                                <span className="px-6 py-2.5">Магнитная</span>
+                                <span className="px-6 py-2.5">Написать в чат</span>
                               </MagneticButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <GradientButton borderWidth={2}>Контур-градиент</GradientButton>
+                              <GradientButton borderWidth={2}>Поделиться</GradientButton>
                             </StaggerItem>
                           </StaggerContainer>
                         </div>
@@ -228,22 +230,22 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.4}>
                       <div className="p-6 rounded-xl border glassmorphic-card border-glow-green">
-                        <h4 className="text-lg font-medium mb-6">Состояния и варианты</h4>
+                        <h4 className="text-lg font-medium mb-6">Регистрация на событие</h4>
                         <div className="flex flex-wrap gap-6">
                           <StaggerContainer>
                             <StaggerItem>
-                              <PrimaryButton isLoading loadingText="Загрузка...">
-                                Отправить
+                              <PrimaryButton isLoading loadingText="Регистрация...">
+                                Участвовать
                               </PrimaryButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <SecondaryButton disabled>Отключена</SecondaryButton>
+                              <SecondaryButton disabled>Мест нет</SecondaryButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <OutlineButton size="sm">Малая</OutlineButton>
+                              <OutlineButton size="sm">Лист ожидания</OutlineButton>
                             </StaggerItem>
                             <StaggerItem>
-                              <PrimaryButton size="lg">Большая</PrimaryButton>
+                              <PrimaryButton size="lg">Записаться</PrimaryButton>
                             </StaggerItem>
                           </StaggerContainer>
                         </div>
@@ -253,32 +255,33 @@ export function ComponentLibraryShowcase() {
                 </div>
               </TabsContent>
 
-              {/* Progress Tab */}
+              {/* Достижения Tab */}
               <TabsContent value="progress" className="space-y-12">
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-medium tracking-tight text-center">Карточки прогресса</h3>
+                  <h3 className="text-2xl font-medium tracking-tight text-center">Твой прогресс и достижения</h3>
                   <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-8">
-                    Визуализируйте прогресс, статус выполнения и метрики с этими интерактивными карточками
+                    Отслеживай активность, выполняй челленджи и зарабатывай бейджи
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <ScrollAnimation type="slide" direction="up" delay={0.1}>
                       <ProgressCard
-                        title="Выполнение проекта"
-                        description="Отслеживайте прогресс вашего проекта."
+                        title="Пробежка за месяц"
+                        description="Цель: 50 км. Продолжай в том же духе!"
                         progress={65}
                         total={100}
                         status="default"
                         showPercentage
                         variant="default"
-                        icon={<Layers className="h-6 w-6" />}
+                        icon={<Icon name="Footprints" className="h-6 w-6" />}
                         className="border-glow-red"
                       />
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.2}>
                       <ProgressCard
-                        title="Статус загрузки"
+                        title="Посещено площадок"
+                        description="Челлендж: 5 новых площадок за месяц"
                         progress={80}
                         total={100}
                         status="success"
@@ -293,29 +296,29 @@ export function ComponentLibraryShowcase() {
 
                     <ScrollAnimation type="slide" direction="up" delay={0.3}>
                       <ProgressCard
-                        title="Использование хранилища"
-                        description="Вы приближаетесь к лимиту хранилища."
+                        title="Часы тренировок"
+                        description="Ещё немного до следующего уровня!"
                         progress={85}
                         total={100}
                         status="warning"
                         showPercentage
                         variant="outlined"
-                        icon={<Palette className="h-6 w-6" />}
+                        icon={<Icon name="Timer" className="h-6 w-6" />}
                         className="border-glow-purple"
                       />
                     </ScrollAnimation>
 
                     <ScrollAnimation type="slide" direction="up" delay={0.4}>
                       <ProgressCard
-                        title="Прогресс обучения"
-                        description="Отслеживайте прохождение курса."
+                        title="План тренировок на неделю"
+                        description="Выполнено занятий из запланированных"
                         progress={30}
                         total={100}
                         status="info"
                         showFraction
                         variant="glass"
                         progressColor="bg-blue-500"
-                        icon={<BookOpen className="h-6 w-6" />}
+                        icon={<Icon name="CalendarCheck" className="h-6 w-6" />}
                         className="border-glow-green"
                       />
                     </ScrollAnimation>
@@ -334,7 +337,7 @@ export function ComponentLibraryShowcase() {
                         className="bg-background border-0 text-foreground hover:text-white px-6 py-2.5"
                       >
                         <span className="flex items-center">
-                          Вся библиотека
+                          Все мои достижения
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </span>
                       </PrimaryButton>

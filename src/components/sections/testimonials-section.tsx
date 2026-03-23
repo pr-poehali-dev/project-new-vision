@@ -8,25 +8,25 @@ import { AnimatedBackground } from "@/components/ui/animated-background"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Алексей Иванов",
-      role: "Frontend-разработчик",
+      name: "Алексей Новиков",
+      role: "Любитель футбола",
       content:
-        "Эта библиотека сэкономила мне кучу времени на разработку. Компоненты красиво оформлены и легко настраиваются.",
-      avatar: "АИ",
+        "Нашёл отличное поле в 5 минутах от дома через SportMap! Отзывы помогли выбрать площадку с хорошим покрытием. Теперь собираем команду прямо через приложение.",
+      avatar: "АН",
     },
     {
-      name: "Мария Петрова",
-      role: "UI/UX-дизайнер",
+      name: "Мария Соколова",
+      role: "Тренер по йоге",
       content:
-        "Как дизайнер, я ценю внимание к деталям в этих компонентах. Они не только функциональны, но и эстетичны.",
-      avatar: "МП",
+        "AI-тренер подсказывает разминку под погоду и предупреждает о рисках. Очень удобно для моих учеников — планируем тренировки через встроенный календарь.",
+      avatar: "МС",
     },
     {
-      name: "Дмитрий Козлов",
-      role: "Продакт-менеджер",
+      name: "Дмитрий Орлов",
+      role: "Любитель бега",
       content:
-        "Продуктивность нашей команды значительно выросла с этой библиотекой. Документация отличная, компоненты надежные.",
-      avatar: "ДК",
+        "Челленджи и бейджи реально мотивируют! Пробежал 50 км за месяц и получил приз от партнёра. Таблица лидеров в районе даёт азарт и желание тренироваться чаще.",
+      avatar: "ДО",
     },
   ]
 
@@ -39,13 +39,13 @@ export function TestimonialsSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <AnimatedText
-                text="Отзывы пользователей"
+                text="Что говорят спортсмены"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl"
                 animation="slide"
               />
               <AnimatedText
-                text="Узнайте, что говорят разработчики и дизайнеры, использующие нашу библиотеку."
+                text="Тысячи активных пользователей уже нашли свои любимые площадки и партнёров для тренировок через SportMap."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"

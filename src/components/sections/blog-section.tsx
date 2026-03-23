@@ -5,22 +5,22 @@ import { ArrowRight } from "lucide-react"
 export function BlogSection() {
   const blogPosts = [
     {
-      title: "Создание современных UI с PixelForge",
-      description: "Узнайте, как создавать красивые интерфейсы с нашей библиотекой компонентов.",
-      date: "15 мая 2023",
-      readTime: "5 мин",
+      title: "Городской турнир по уличному баскетболу",
+      description: "Открытый турнир 3x3 на главной площадке парка Горького. Участие бесплатное, призовой фонд 50 000 ₽. Регистрация команд до 29 марта.",
+      date: "5 апреля 2026",
+      readTime: "Регистрация",
     },
     {
-      title: "Мощь Tailwind CSS и React",
-      description: "Как Tailwind CSS и React могут преобразить ваш рабочий процесс разработки.",
-      date: "28 апреля 2023",
-      readTime: "7 мин",
+      title: "Открытая тренировка: йога на свежем воздухе",
+      description: "Еженедельная бесплатная тренировка для всех уровней подготовки. Берите коврик и приходите на Воробьёвы горы.",
+      date: "29 марта 2026",
+      readTime: "Бесплатно",
     },
     {
-      title: "Доступные компоненты",
-      description: "Лучшие практики создания UI-компонентов, доступных для всех пользователей.",
-      date: "10 апреля 2023",
-      readTime: "6 мин",
+      title: "Мастер-класс по спринту с олимпийским тренером",
+      description: "Техника старта, разбор ошибок и индивидуальные рекомендации от мастера спорта по лёгкой атлетике.",
+      date: "2 апреля 2026",
+      readTime: "Записаться",
     },
   ]
 
@@ -30,9 +30,9 @@ export function BlogSection() {
         <ScrollReveal>
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Статьи</h2>
+              <h2 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl">Ближайшие события</h2>
               <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70">
-                Будьте в курсе наших новостей, туториалов и лучших практик.
+                Турниры, мастер-классы и открытые тренировки в вашем городе. Регистрируйтесь прямо здесь.
               </p>
             </div>
           </div>
@@ -56,7 +56,7 @@ export function BlogSection() {
                     href="#"
                     className="inline-flex items-center text-sm text-primary hover:underline transition-colors"
                   >
-                    Читать далее
+                    Подробнее и регистрация
                     <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
                 </CardFooter>

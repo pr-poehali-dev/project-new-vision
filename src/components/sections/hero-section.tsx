@@ -6,6 +6,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import { GradientButton } from "@/components/ui-library/buttons/gradient-button"
+import Icon from "@/components/ui/icon"
 
 // Animation variants
 const containerVariants = {
@@ -45,13 +46,13 @@ export function HeroSection() {
               <motion.div className="space-y-4" variants={itemVariants}>
                 {/* Modern Hero Header with Gradient */}
                 <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                  <span className="gradient-text">UI-компоненты</span>
+                  <span className="gradient-text">Найди площадку</span>
                   <br />
-                  <span className="text-foreground">для веб-разработчиков</span>
+                  <span className="text-foreground">для любого спорта</span>
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 opacity-70">
-                  Премиум-библиотека компонентов на shadcn/ui и Aceternity UI для современных веб-приложений.
-                  Создана для разработчиков и дизайнеров в сфере AI-софта.
+                  Интерактивная карта спортивных объектов города. Футбол, баскетбол, теннис, бассейны, скалодромы —
+                  всё в одном месте. С рейтингами, отзывами и AI-тренером.
                 </p>
               </motion.div>
 
@@ -64,7 +65,7 @@ export function HeroSection() {
                   asChild
                 >
                   <a href="#components" className="flex items-center">
-                    Начать
+                    Найти площадку
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -85,7 +86,7 @@ export function HeroSection() {
               <motion.div variants={itemVariants} className="pt-4">
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-                  Более 2 000 разработчиков по всему миру
+                  Более 5 000 спортивных объектов на карте
                 </p>
               </motion.div>
             </motion.div>
@@ -95,33 +96,56 @@ export function HeroSection() {
             <SpotlightCard className="relative h-[450px] w-full overflow-hidden rounded-xl border glassmorphic-card p-1 border-glow-red">
               <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-gray-900/20 z-10"></div>
               <div className="relative z-20 h-full w-full rounded-xl bg-gradient-to-br from-red-950/50 to-gray-950/50 p-6 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-6 w-full max-w-md">
+                <div className="grid grid-cols-2 gap-4 w-full max-w-md">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
-                    className="col-span-2 h-24 rounded-xl bg-red-800/20 border border-red-800/30 flex items-center justify-center glassmorphic-inner-card"
+                    className="col-span-2 h-20 rounded-xl bg-red-800/20 border border-red-800/30 flex items-center justify-center gap-3 glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
                   >
-                    <span className="font-heading text-xl text-white tracking-tight">Премиум-компоненты</span>
+                    <Icon name="MapPin" size={20} className="text-red-400" />
+                    <span className="font-heading text-lg text-white tracking-tight">Интерактивная карта</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.8 }}
-                    className="h-32 rounded-xl bg-gray-800/20 border border-gray-800/30 flex items-center justify-center glassmorphic-inner-card"
+                    className="h-28 rounded-xl bg-gray-800/20 border border-gray-800/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(75, 85, 99, 0.3)" }}
                   >
-                    <span className="font-heading text-white tracking-tight">Tailwind</span>
+                    <Icon name="Users" size={22} className="text-blue-400" />
+                    <span className="font-heading text-sm text-white tracking-tight">Комьюнити</span>
                   </motion.div>
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.0 }}
-                    className="h-32 rounded-xl bg-red-900/20 border border-red-900/30 flex items-center justify-center glassmorphic-inner-card"
+                    className="h-28 rounded-xl bg-red-900/20 border border-red-900/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
                     whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
                   >
-                    <span className="font-heading text-white tracking-tight">TypeScript</span>
+                    <Icon name="Bot" size={22} className="text-red-400" />
+                    <span className="font-heading text-sm text-white tracking-tight">AI-тренер</span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.1 }}
+                    className="h-28 rounded-xl bg-green-900/20 border border-green-900/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
+                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(34, 197, 94, 0.3)" }}
+                  >
+                    <Icon name="Trophy" size={22} className="text-green-400" />
+                    <span className="font-heading text-sm text-white tracking-tight">Геймификация</span>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 1.2 }}
+                    className="h-28 rounded-xl bg-purple-900/20 border border-purple-900/30 flex flex-col items-center justify-center gap-2 glassmorphic-inner-card"
+                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(168, 85, 247, 0.3)" }}
+                  >
+                    <Icon name="Calendar" size={22} className="text-purple-400" />
+                    <span className="font-heading text-sm text-white tracking-tight">События</span>
                   </motion.div>
                 </div>
               </div>

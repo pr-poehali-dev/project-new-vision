@@ -9,11 +9,11 @@ export function SiteFooter() {
           <div className="flex flex-1 flex-col gap-4">
             <a href="/" className="flex items-center gap-2">
               <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">PixelForge</span>
+              <span className="font-heading text-xl tracking-tight">SportMap</span>
             </a>
             <p className="text-muted-foreground max-w-sm opacity-70">
-              Современная библиотека UI-компонентов на базе shadcn/ui и Aceternity UI для веб-разработчиков и дизайнеров
-              в сфере AI-софта.
+              Платформа для поиска спортивных площадок, поиска партнёров для тренировок и активного образа жизни.
+              Футбол, баскетбол, теннис, бассейны и многое другое.
             </p>
             <div className="flex gap-4">
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
@@ -32,14 +32,14 @@ export function SiteFooter() {
           </div>
           <div className="grid flex-1 grid-cols-2 gap-10 sm:grid-cols-3">
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Продукт</h3>
+              <h3 className="text-sm font-medium tracking-tight">Платформа</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
                     href="#features"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Функции
+                    Возможности
                   </a>
                 </li>
                 <li>
@@ -47,7 +47,7 @@ export function SiteFooter() {
                     href="#pricing"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Цены
+                    Тарифы
                   </a>
                 </li>
                 <li>
@@ -55,28 +55,7 @@ export function SiteFooter() {
                     href="#components"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Компоненты
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#changelog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Изменения
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Компания</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <a
-                    href="#about"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    О нас
+                    Площадки
                   </a>
                 </li>
                 <li>
@@ -84,15 +63,36 @@ export function SiteFooter() {
                     href="#blog"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Блог
+                    События
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-sm font-medium tracking-tight">Комьюнити</h3>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <a
+                    href="#testimonials"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                  >
+                    Отзывы
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#careers"
+                    href="#blog"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Вакансии
+                    События
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                  >
+                    FAQ
                   </a>
                 </li>
                 <li>
@@ -146,7 +146,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} PixelForge. Все права защищены.
+            &copy; {new Date().getFullYear()} SportMap. Все права защищены.
           </p>
           <div className="flex gap-4">
             <a
