@@ -11,7 +11,7 @@ export function TestimonialsSection() {
       name: "Алексей Новиков",
       role: "Любитель футбола",
       content:
-        "Нашёл отличное поле в 5 минутах от дома через SportMap! Отзывы помогли выбрать площадку с хорошим покрытием. Теперь собираем команду прямо через приложение.",
+        "Нашёл отличное поле в 5 минутах от дома через SportTech Map! Отзывы помогли выбрать площадку с хорошим покрытием. Теперь собираем команду прямо через приложение.",
       avatar: "АН",
     },
     {
@@ -45,7 +45,7 @@ export function TestimonialsSection() {
                 animation="slide"
               />
               <AnimatedText
-                text="Тысячи активных пользователей уже нашли свои любимые площадки и партнёров для тренировок через SportMap."
+                text="Тысячи активных пользователей уже нашли свои любимые площадки и партнёров для тренировок через SportTech Map."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"

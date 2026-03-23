@@ -68,7 +68,7 @@ export function FeaturesSection() {
                 animation="slide"
               />
               <AnimatedText
-                text="SportMap объединяет всё необходимое: поиск площадок, спортивное комьюнити, умный тренер и геймификация в одной платформе."
+                text="SportTech Map объединяет всё необходимое: поиск площадок, спортивное комьюнити, умный тренер и геймификация в одной платформе."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"

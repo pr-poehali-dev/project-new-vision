@@ -20,7 +20,7 @@ export function CtaSection() {
                 animation="wave"
               />
               <AnimatedText
-                text="Найдите площадку, соберите команду и начните тренироваться уже сегодня. SportMap — всё для вашего активного образа жизни."
+                text="Найдите площадку, соберите команду и начните тренироваться уже сегодня. SportTech Map — всё для вашего активного образа жизни."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
