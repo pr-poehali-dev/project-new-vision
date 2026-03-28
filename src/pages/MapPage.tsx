@@ -23,11 +23,11 @@ export default function MapPage() {
 
       <main className="flex-1">
         <iframe
-          src="https://yandex.ru/maps/?um=constructor%3Ae6e3651ce02424c56f3836cf182ba0162280441a450eb6ba8aea6e1e6c227b6d&source=constructorLink"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae6e3651ce02424c56f3836cf182ba0162280441a450eb6ba8aea6e1e6c227b6d&source=constructor"
           width="100%"
           height="100%"
           style={{ border: "none", minHeight: "calc(100vh - 65px)", display: "block" }}
-          allowFullScreen
+          frameBorder={0}
           title="Спортивные объекты Липецка"
         />
       </main>
