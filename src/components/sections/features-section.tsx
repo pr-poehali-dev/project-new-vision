@@ -5,6 +5,7 @@ import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedBackground } from "@/components/ui/animated-background"
 import Icon from "@/components/ui/icon"
+import { Link } from "react-router-dom"
 
 export function FeaturesSection() {
   const features = [
@@ -13,6 +14,7 @@ export function FeaturesSection() {
       title: "Интерактивная карта",
       description: "Фильтры по типу спорта, рейтинги и отзывы, фото и панорамы площадок.",
       borderClass: "border-glow-red",
+      href: "/map",
     },
     {
       icon: <Icon name="Users" className="h-10 w-10 text-blue-500" />,
@@ -76,24 +78,49 @@ export function FeaturesSection() {
             {features.map((feature, index) => (
               <ScrollReveal key={index} delay={index * 0.1}>
                 <GlowingTiltCard>
-                  <Card
-                    className={`h-full glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
-                  >
-                    <CardHeader>
-                      <div className="p-2 rounded-xl w-fit bg-muted/50 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                        {feature.icon}
-                      </div>
-                      <CardTitle className="mt-4 tracking-tight relative">
-                        {feature.title}
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
-                        {feature.description}
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
+                  {feature.href ? (
+                    <Link to={feature.href} className="block h-full">
+                      <Card className={`h-full glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass} cursor-pointer`}>
+                        <CardHeader>
+                          <div className="p-2 rounded-xl w-fit bg-muted/50 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                            {feature.icon}
+                          </div>
+                          <CardTitle className="mt-4 tracking-tight relative">
+                            {feature.title}
+                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                          </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+                            {feature.description}
+                          </CardDescription>
+                          <div className="mt-3 flex items-center gap-1 text-xs text-red-500 font-medium">
+                            <span>Открыть карту</span>
+                            <Icon name="ArrowRight" size={12} />
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  ) : (
+                    <Card
+                      className={`h-full glassmorphic-card border-none overflow-hidden group soft-glow ${feature.borderClass}`}
+                    >
+                      <CardHeader>
+                        <div className="p-2 rounded-xl w-fit bg-muted/50 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+                          {feature.icon}
+                        </div>
+                        <CardTitle className="mt-4 tracking-tight relative">
+                          {feature.title}
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
+                          {feature.description}
+                        </CardDescription>
+                      </CardContent>
+                    </Card>
+                  )}
                 </GlowingTiltCard>
               </ScrollReveal>
             ))}
