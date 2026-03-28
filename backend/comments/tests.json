@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "GET comments",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"comments": []},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST comment",
+      "method": "POST",
+      "path": "/",
+      "body": {"author_name": "Тест", "content": "Тестовый комментарий"},
+      "expectedStatus": 201,
+      "expectedBody": {"author_name": "Тест"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}

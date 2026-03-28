@@ -9,6 +9,7 @@ import { ComponentLibraryShowcase } from "@/components/sections/component-librar
 import { BlogSection } from "@/components/sections/blog-section"
 import { FaqSection } from "@/components/sections/faq-section"
 import { CtaSection } from "@/components/sections/cta-section"
+import { CommentsSection } from "@/components/sections/comments-section"
 import { MouseGlow } from "@/components/ui-library/effects/mouse-glow"
 
 const Index = () => {
@@ -36,6 +37,7 @@ const Index = () => {
             <BlogSection />
             <FaqSection />
             <CtaSection />
+            <CommentsSection />
           </main>
         </PageTransition>
         <SiteFooter />
